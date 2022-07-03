@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Ibrahima Drame | Contact</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      defer=""
+      src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
+    ></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js"
+      async=""
+      defer=""
+    ></script>
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar is-transparent is-planner animate-fadeDown">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="./index.html"
+            ><img
+              src="../img/logo.png"
+              alt="Ibrahima Drame | Front-end Developer"
+              height="48"
+          /></a>
+        </div>
+      </div>
+    </nav>
+    <div class="is-form-page animate-fadeUp">
+      <section class="is-white has-text-centered">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-three-quarters">
+              <h1
+                class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile"
+              >
+                Thanks for taking the time to reach out. How can I help you
+                today?
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="is-white">
+        <div class="container">
+          <script>
+            function onSubmit(token) {
+              document.getElementById("invisible-recaptcha-form").submit();
+            }
+          </script>
+          <form
+            id="invisible-recaptcha-form"
+            action="https://usebasin.com/f/7504cc16b7b0"
+            accept-charset="UTF-8"
+            method="POST"
+          >
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control is-expanded">
+                    <input
+                      class="input is-large"
+                      name="name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="column is-half">
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control is-expanded">
+                    <input
+                      class="input is-large"
+                      name="email"
+                      type="email"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control is-expanded">
+                    <textarea
+                      class="textarea is-large"
+                      name="message"
+                      rows="5"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="field is-hidden">
+                  <label class="is-hidden"></label>
+                  <div class="control is-expanded is-hidden">
+                    <input class="is-hidden" name="bot_vortex" type="hidden" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column is-one-third">
+                <div class="field">
+                  <div class="control">
+                    <button
+                      class="button is-primary is-outlined is-medium is-fullwidth is-rounded g-recaptcha"
+                      data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"
+                      data-callback="onSubmit"
+                      data-badge="inline"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="js/main-min.js"></script>
+    <script
+      src="https://usebasin.com/f/7504cc16b7b0/ahoy.js"
+      async=""
+      defer=""
+    ></script>
+    <script type="text/javascript">
+      function configureAhoy() {
+        ahoy.configure({
+          visitsUrl: "https://usebasin.com/ahoy/visits",
+          eventsUrl: "https://usebasin.com/ahoy/events",
+          page: "503e51017614" /* Use your form id here */,
+        });
+        ahoy.trackView();
+        ahoy.trackSubmits();
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/ahoy.js@0.3.9/dist/ahoy.min.js"
+      async
+      defer
+      onload="configureAhoy()"
+    ></script>
+  </body>
+</html>
