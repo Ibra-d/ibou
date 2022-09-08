@@ -1,265 +1,268 @@
-
-  <!DOCTYPE html>
-  <htm lang="fr">
-
-    <head>
-      <title>Ibrahima Drame | Designer, Front-end Developer &amp; Mentor</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta http-equiv="x-ua-compatible" content="ie=edge" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="stylesheet" href="./css/style.css" />
-      <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-      <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    </head>
-
-    <body>
-      <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
-        <div class="container">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="./index.html"><img src="./img/logo.png"
-                alt="Ibrahima Drame | Front-end Developer" height="48" /></a><a class="navbar-burger" role="button"
-              aria-label="menu" aria-expanded="false" data-target="#navMenu"><span aria-hidden="true"></span><span
-                aria-hidden="true"></span><span aria-hidden="true"></span></a>
-          </div>
-          <div class="navbar-menu" id="navMenu">
-            <div class="navbar-start"></div>
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <a class="button is-primary is-outlined is-rounded" href="./contact.html">Say Hello</a>
+<html
+  lang="ja"
+  style="
+    --c-bg: hsl(0, 0%, 5%);
+    --c-text: hsl(0, 0%, 95%);
+    --vw: 15.36px;
+    --vh: 8.1px;
+    --vmax: 15.36px;
+    --vmin: 8.1px;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Drame Ibrahima</title>
+    <meta name="description" content="Developpeur" />
+    <link rel="canonical" href="https://p5aholic.me" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Drame Ibrahima" />
+    <meta property="og:title" content="Drame Ibrahima" />
+    <meta property="og:description" content="Developpeur in french" />
+    <meta property="og:url" content="https://p5aholic.me" />
+    <meta
+      property="og:image"
+      content="https://p5aholic.me/assets/share-image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="google" content="nositelinkssearchbox" />
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="./css//style.css" />
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/favicon.png" />
+  </head>
+  <body>
+    <div id="Page" class="is-dark">
+      <div id="Background">
+        <canvas
+          data-engine="three.js r138"
+          width="1839"
+          height="931"
+          style="width: 1471.25px; height: 744.85px"
+        ></canvas>
+      </div>
+      <div class="mask" id="Mask">
+        <div class="mask_top"></div>
+        <div class="mask_bottom"></div>
+      </div>
+      <div class="frame" id="Frame">
+        <div class="frame_line frame_line-left"></div>
+        <div class="frame_line frame_line-right"></div>
+        <div class="frame_line frame_line-top"></div>
+        <div class="frame_line frame_line-bottom"></div>
+      </div>
+      <div class="theme" id="Theme" x-data="" @click="$store.ui.toggleTheme()">
+        <div
+          class="theme_color"
+          :class="{ 'is-selected': $store.ui.theme === 'light' }"
+        >
+          <div class="_box"></div>
+          <div class="_text">Light</div>
+        </div>
+        <div
+          class="theme_color is-selected"
+          :class="{ 'is-selected': $store.ui.theme === 'dark' }"
+        >
+          <div class="_box"></div>
+          <div class="_text">Dark</div>
+        </div>
+      </div>
+      <header class="siteHeader" id="SiteHeader">
+        <h1 class="siteHeader_title">Drame Ibrahima</h1>
+        <p class="siteHeader_label">Developpeur</p>
+        <nav class="siteHeader_nav" x-data="">
+          <ol>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/' }"
+              class="is-selected"
+            >
+              <div class="_dot">●</div>
+              <a class="_text" href="/">Home</a>
+            </li>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/projects/' }"
+              class=""
+            >
+              <div class="_dot">●</div>
+              <a class="_text" href="/projects/">Projects</a>
+            </li>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/info/' }"
+              class=""
+            >
+              <div class="_dot">●</div>
+              <a class="_text" href="/info/">Info</a>
+            </li>
+            <li
+              :class="{ 'is-selected': $store.ui.currentPath === '/contact/' }"
+              class=""
+            >
+              <div class="_dot">●</div>
+              <a class="_text" href="/contact/">Contact</a>
+            </li>
+          </ol>
+        </nav>
+      </header>
+      <main class="content" id="Content">
+        <div
+          class="content_inner"
+          style="transform: translate3d(0px, 0px, 0px)"
+        >
+          <section
+            class="page"
+            data-page="home"
+            style="display: block; opacity: 1"
+          >
+            <div class="page_content home">
+              <p class="home_aboutme">
+                <span>Né en 1998</span><span>à Dakar, Sénégal.</span
+                ><span>Je crois en</span><span>la conception de sites Web</span
+                ><span>peut être plus</span><span>diversifié et inspirant.</span
+                ><span>Avec pour mission</span><span>de présenter</span
+                ><span>les possibilités</span><span>de la conception Web,</span
+                ><span>Je recherche</span><span>de nouvelles expressions</span
+                ><span>à travers des expériences</span
+                ><span>et des réflexions.</span>
+              </p>
+            </div>
+          </section>
+          <section
+            class="page"
+            data-page="projects"
+            style="display: none; opacity: 0"
+          >
+            <div class="page_content project">
+              <div class="project_section">
+                <h2 class="project_heading">■ Projects ( Develop)</h2>
+                <div class="project_list">
+                  <a
+                    class="project_item text-btn"
+                    href="https://booki-ibou.netlify.app/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">BOOKI.h</div>
+                    <div class="project_info">2021 / Formation</div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://ibra-d.github.io/Optimisation-agence-web-SEO/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">SEO- PROJECTS</div>
+                    <div class="project_info">2021 / Formation</div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://ibra-d.github.io/Creation-d-annimations-HTML-Sass/"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">Oh My Food</div>
+                    <div class="project_info">2021 / Formation</div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://github.com/Ibra-d/e-commerce--javaScript-"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">E-Commerce / GitHub</div>
+                    <div class="project_info">2022 / Formation</div></a
+                  >
+                  <a
+                    class="project_item text-btn"
+                    href="https://github.com/Ibra-d/Creation-d-api-Rest-Node-JS"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">Node-JS Projects / GitHub</div>
+                    <div class="project_info">2022 / Formation</div></a
+                  ><a
+                    class="project_item text-btn"
+                    href="https://github.com/Ibra-d/Creation-de-reseau-social-Vue-JS"
+                    target="_blank"
+                    rel="noopener"
+                    ><div class="project_title">Social Media / GitHub</div>
+                    <div class="project_info">2022 / Formation</div></a
+                  >
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </nav>
-      <section data-aos="fade-right" class="hero is-white has-text-centered">
-        <div class="hero-body">
-          <div class="container">
-            <div class="columns is-centered">
-              <div class="column">
-                <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">
-                  Développeur Front-end
-                </h1>
-                <h2 class="subtitle is-size-4-desktop">
-                  Je conçois et code des choses magnifiquement simples, et j'aime ce que je fais.
-                </h2>
-                <img src="./img/8BF48855-3219-400D-88A3-4C9408263C7B.JPEG" class="avatar" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-foot">
-          <div class="container">
-            <img class="is-bottom" src="./img/hero.svg" />
-          </div>
-        </div>
-      </section>
-      <section data-aos="fade-left" class="section is-medium is-primary has-text-centered is-long">
-        <div class="container">
-          <div class="columns is-centered">
-            <div class="column is-three-fifths">
-              <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
-                Salut, je suis Ibou. Ravi de vous rencontrer.
-              </h1>
-              <h2 class="subtitle is-size-5-desktop">
-                Je suis tranquillement confiant, naturellement curieux et je travaille perpétuellement pour améliorer mes côtelettes. Un problème de conception en même temps.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section skills has-text-centered">
-        <div class="container is-narrow">
-          <div class="box" data-aos="fade-up">
-            <div class="content">
-              <div class="columns is-centered">
-                <div class="column">
-                  <figure class="image">
-                    <img class="is-skill-icon" src="https://mattfarley.ca/img/icons/frontend.svg" />
-                  </figure>
-                  <h1 class="title is-size-4 is-spaced">Développeur Front-end </h1>
-                  <p>
-                    J'aime coder des choses à partir de zéro et donner vie à des idées dans le navigateur.
-                  </p>
-                  <p class="list-title has-text-primary has-text-weight-normal">
-                    Languages :
-                  </p>
-                  <p>HTML, CSS, Sass, Less, JavaScript, VueJs</p>
-                  <p class="list-title has-text-primary has-text-weight-normal">
-                    Dev Tools:
-                  </p>
+          </section>
+          <section
+            class="page"
+            data-page="info"
+            style="display: none; opacity: 0"
+          >
+            <div class="page_content info">
+              <div class="info_item info_item-1">
+                <div class="info_content">
                   <ul>
-                    <li>VS-Code</li>
-                    <li>Bootstrap</li>
-                    <li>Bulma</li>
-                    <li>Codepen</li>
-                    <li>Github</li>
-                    <li>Figma</li>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://twitter.com/drame_98"
+                        target="_blank"
+                        rel="noopener"
+                        >Twitter ↗</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-btn"
+                        href="https://www.instagram.com/"
+                        target="_blank"
+                        rel="noopener"
+                        >Instagram ↗</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="info_item info_item-3">
+                <div class="info_content">
+                  <ul>
+                    <li>
+                      <span class="is-light">Autodidacte<br /></span
+                      ><span>React Native</span>
+                    </li>
+                    <li>
+                      <span class="is-light">Diplomé Titre niveau 5<br /></span
+                      ><span>2022 Nominee</span>
+                    </li>
+                    <li>
+                      <span class="is-light">Amoureux d'informatique<br /></span
+                      ><span>2000 zero, zero, zero (a l'infini)</span>
+                    </li>
                   </ul>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section data-aos="fade-down" class="section projects is-medium is-white has-text-centered">
-        <div class="container is-narrow">
-          <h1 class="title is-spaced is-size-3-desktop is-size-4-mobile">
-            Mes travaux récents
-          </h1>
-          <h2 class="subtitle is-size-5-desktop">
-            Voici quelques projets de developpement web sur lesquels j'ai travaillé récemment. Vous voulez en voir plus
-            ?
-            <a href="./contact.html"> Envoyez moi un email.</a>
-          </h2>
-          <div class="project-grid">
-            <div class="columns is-multiline is-mobile">
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-left">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      Booki, Un site permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/Integration-maquette-HTML-CSS"
-                      target="_blank"><span>Visister</span><span class="icon"><i
-                          class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-right">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration.
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/Creation-d-annimations-HTML-Sass"
-                      target="_blank"><span>Visister</span><span class="icon"><i
-                          class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-left">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      une grande agence de web design basée à Lyon.
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/Optimisation-agence-web-SEO"
-                      target="_blank"><span>Visister</span><span class="icon"><i
-                          class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-right">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      une marque de canapés qui vend ses produits depuis sa boutique exclusivement. 
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/e-commerce--javaScript-"><span>Visiter</span><span class="icon"><i class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-left">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      une « galerie de sauces » permettant aux utilisateurs de télécharger leurs sauces piquantes préférées et de liker ou disliker les sauces que d'autres partagent
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/Creation-d-api-Rest-Node-JS"
-                      target="_blank"><span>Visister</span><span class="icon"><i
-                          class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-              <div class="column is-12-mobile is-half-tablet is-one-third-desktop" data-aos="fade-right">
-                <figure class="image is-3by2">
-                  <img class="project-thumb" id="project-thumb" src="./img/oc.jpg" />
-                  <figcaption>
-                    <h1 class="title is-size-5 is-size-4-widescreen">
-                      réseau social interne pour les employés de Groupomania
-                    </h1>
-                    <a class="button is-primary is-outlined is-rounded" href="https://github.com/Ibra-d/Creation-de-reseau-social-Vue-JS"
-                      target="_blank"><span>Visiter</span><span class="icon"><i
-                          class="fas fa-angle-right"></i></span></a>
-                  </figcaption>
-                  <div class="overlay"></div>
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="columns is-centered">
-            <div class="column">
-              <a class="button is-primary is-outlined is-rounded is-medium" href="https://github.com/Ibra-d"
-                target="_blank"><span class="icon"><i class="fab fa-dribbble"></i></span><span> Voir d'autres sur
-                  Github</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section call-to-action is-primary has-text-centered">
-        <div class="container is-narrow">
-          <div class="box" data-aos="fade-up">
-            <div class="columns level">
-              <div class="column level-item">
-                <h1 class="title">Démarrer un projet</h1>
-              </div>
-              <div class="column level-item">
-                <p>
-                  Intéressé à travailler ensemble ?.
+          </section>
+          <section
+            class="page"
+            data-page="contact"
+            style="display: none; opacity: 0"
+          >
+            <div class="page_content contact">
+              <div class="contact_wrap">
+                <p class="contact_forPeopleOverseas">
+                  "Toute technologie <br />
+                  suffisamment avancée <br />
+                  est indiscernable <br />
+                  de la magie." <br />
+                  Arthur C. Clarke <br />
+                  <a
+                    style="color: hsl(0, 0%, 48%)"
+                    href="mailto:drame.ibou.07@gmail.com"
+                    >Contactez Moi !</a
+                  >
                 </p>
               </div>
-              <div class="column level-item">
-                <a class="button is-primary is-outlined is-rounded is-medium" href="./contact.html">Contacter moi</a>
-              </div>
             </div>
-          </div>
+          </section>
         </div>
-      </section>
-      <footer class="section is-primary is-small has-text-centered">
-        <div class="container is-narrow">
-          <a class="logo" href="/"><img src="./img/8BF48855-3219-400D-88A3-4C9408263C7B.JPEG"
-              style="border-radius: 50%;" width="100" alt="Front-end Developer" height="48" /></a>
-          <div class="columns is-centered">
-            <div class="column is-one-third">
-              <h1 class="title is-size-4-touch">
-                Vivre, apprendre et monter de niveau un jour à la fois.
-              </h1>
-            </div>
-          </div>
-          <div class="social-icons">
-            <p class="field"><a class="button is-medium" href="https://www.linkedin.com/in/ibrahima-drame-046799240/"
-                target="_blank"><span class="icon is-small"><i class="fab fa-linkedin-in fa-fw"></i></span></a><a class="button is-medium"
-                href="https://github.com/Ibra-d" target="_blank"><span class="icon is-small"><i
-                    class="fab fa-github"></i></span></a><a class="button is-medium"
-                href="mailto:drame.ibou.07@gmail.com" target="_blank"><span
-                  class="icon is-small"><i class="far fa-envelope fa-fw"></i></span></a>
-            </p>
-          </div>
-          <div class="copyright">
-           by ibou<span class="icon has-white-text" style="vertical-align: middle"><i
-                class="far fa-copyright"></i></span>2022
-          </div>
-        </div>
-      </footer>
-      <script src="./js/index.js"></script>
-      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script>
-        AOS.init();
-      </script>
-    </body>
-
-    </html>
+      </main>
+    </div>
+    <script src="./assets/js/vendor.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
