@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+
+$bg: #c5c5c5;
+$col: #000;
+$font: "Orbitron";
+$center: "center";
+$bet: "space-between";
+
+* {
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  background-color: $bg;
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  overflow: hidden;
+
+  .loader {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    z-index: 20;
+  }
+
+  .cursor {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    translate: -50% -50%;
+    background-color: #000;
+    transition: 0.1s;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: "";
+      height: 6px;
+      width: 6px;
+      background-color: #000;
+      border-radius: 50%;
+    }
+  }
+
+  main {
+    padding: 0 3em;
+
+    .landing_page {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-top: 1em;
+
+        // .logo {}
+
+        .toggle_up {
+          display: none;
+        }
+
+        nav {
+          ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            gap: 3em;
+            position: relative;
+
+            .toggle_down {
+              display: none;
+            }
+
+            li {
+              list-style: none;
+              padding: 0.4em;
+              //   transition: 300ms;
+
+              &:hover {
+                transform: translateY(1em);
+              }
+
+              a {
+                text-decoration: none;
+                color: $col;
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .contact {
+              border: 1px solid $col;
+            }
+          }
+        }
+
+        @media (max-width: 900px) {
+          .toggle_up {
+            // position: absolute;
+            // top: 1em;
+            // right: 1em;
+            height: 3em;
+            width: 3em;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            background-color: $col;
+            cursor: pointer;
+            transition: 500ms cubic-bezier(1, 0, 0, 1);
+
+            .bar {
+              height: 2px;
+              width: 1.5em;
+              background-color: $bg;
+              transition: 200ms cubic-bezier(1, 0, 0, 1);
+            }
+          }
+
+          nav {
+            ul {
+              flex-direction: column;
+              position: fixed;
+              top: 0;
+              left: 0;
+              height: 100vh;
+              width: 100%;
+              background-color: $bg;
+              translate: 100% 0;
+              transition: 900ms cubic-bezier(1, 0, 0, 1);
+
+              .toggle_down {
+                position: absolute;
+                top: 1em;
+                right: 1em;
+                height: 3em;
+                width: 3em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+                background-color: $col;
+                cursor: pointer;
+
+                .bar {
+                  height: 2px;
+                  width: 1.5em;
+                  background-color: $bg;
+                  transition: 200ms cubic-bezier(1, 0, 0, 1);
+                }
+
+                .bar1 {
+                  transform: rotate(45deg);
+                  position: absolute;
+                }
+
+                .bar2 {
+                  transform: rotate(-45deg);
+                  position: absolute;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .landing_page_container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .text_title {
+          font-size: 4em;
+          font-weight: bold;
+          margin: 0;
+          padding: 0;
+          color: $bg;
+          text-shadow: rgb(0, 0, 0) 2px 0px 0px,
+            rgb(0, 0, 0) 1.75517px 0.958851px 0px,
+            rgb(0, 0, 0) 1.0806px 1.68294px 0px,
+            rgb(0, 0, 0) 0.141474px 1.99499px 0px,
+            rgb(0, 0, 0) -0.832294px 1.81859px 0px,
+            rgb(0, 0, 0) -1.60229px 1.19694px 0px,
+            rgb(0, 0, 0) -1.97998px 0.28224px 0px,
+            rgb(0, 0, 0) -1.87291px -0.701566px 0px,
+            rgb(0, 0, 0) -1.30729px -1.5136px 0px,
+            rgb(0, 0, 0) -0.421592px -1.95506px 0px,
+            rgb(0, 0, 0) 0.567324px -1.91785px 0px,
+            rgb(0, 0, 0) 1.41734px -1.41108px 0px,
+            rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+
+          span {
+            margin: 0;
+          }
+        }
+
+        .text_subs {
+          font-size: 3em;
+          margin: 1 0 5em 0;
+          border: 1px solid #000;
+          border-radius: 2em;
+          padding: 0.3em 1em;
+        }
+
+        .img_container {
+          position: absolute;
+          bottom: 3em;
+
+          img {
+            opacity: 20%;
+            transition: 800ms;
+            mix-blend-mode: lighten;
+          }
+
+          .linear {
+            position: absolute;
+            bottom: 0;
+            height: 6em;
+            width: 100%;
+            background: linear-gradient(#ff000000, $bg 60%);
+          }
+        }
+
+        .medias {
+          position: absolute;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5em;
+
+          a {
+            padding: 0.5em;
+            color: $col;
+            text-decoration: none;
+
+            i {
+              font-size: 1.3em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

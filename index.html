@@ -1,268 +1,122 @@
-<html
-  lang="fr"
-  style="
-    --c-bg: hsl(0, 0%, 5%);
-    --c-text: hsl(0, 0%, 95%);
-    --vw: 15.36px;
-    --vh: 8.1px;
-    --vmax: 15.36px;
-    --vmin: 8.1px;
-  "
->
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Drame Ibrahima</title>
+    <title>ID - FRONT.DEV®</title>
     <meta name="description" content="Developpeur" />
-    <link rel="canonical" href="https://p5aholic.me" />
+    <!-- <link rel="canonical" href="https://p5aholic.me" /> -->
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Drame Ibrahima" />
     <meta property="og:title" content="Drame Ibrahima" />
-    <meta property="og:description" content="Developpeur in french" />
-    <meta property="og:url" content="https://p5aholic.me" />
-    <meta
+    <meta property="og:description" content="Developer in french" />
+    <!-- <meta property="og:url" content="https://p5aholic.me" /> -->
+    <!-- <meta
       property="og:image"
       content="https://p5aholic.me/assets/share-image.png"
-    />
+    /> -->
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
-    <link rel="stylesheet" href="./css//style.css" />
-    <link rel="icon" href="/assets/favicon.png" />
-    <link rel="apple-touch-icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon.ico"
+    />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div id="Page" class="is-dark">
-      <div id="Background">
-        <canvas
-          data-engine="three.js r138"
-          width="1839"
-          height="931"
-          style="width: 1471.25px; height: 744.85px"
-        ></canvas>
-      </div>
-      <div class="mask" id="Mask">
-        <div class="mask_top"></div>
-        <div class="mask_bottom"></div>
-      </div>
-      <div class="frame" id="Frame">
-        <div class="frame_line frame_line-left"></div>
-        <div class="frame_line frame_line-right"></div>
-        <div class="frame_line frame_line-top"></div>
-        <div class="frame_line frame_line-bottom"></div>
-      </div>
-      <div class="theme" id="Theme" x-data="" @click="$store.ui.toggleTheme()">
-        <div
-          class="theme_color"
-          :class="{ 'is-selected': $store.ui.theme === 'light' }"
-        >
-          <div class="_box"></div>
-          <div class="_text">Light</div>
-        </div>
-        <div
-          class="theme_color is-selected"
-          :class="{ 'is-selected': $store.ui.theme === 'dark' }"
-        >
-          <div class="_box"></div>
-          <div class="_text">Dark</div>
-        </div>
-      </div>
-      <header class="siteHeader" id="SiteHeader">
-        <h1 class="siteHeader_title">Drame Ibrahima</h1>
-        <p class="siteHeader_label">Developpeur</p>
-        <nav class="siteHeader_nav" x-data="">
-          <ol>
-            <li
-              :class="{ 'is-selected': $store.ui.currentPath === '/' }"
-              class="is-selected"
-            >
-              <div class="_dot">●</div>
-              <a class="_text" href="/">Home</a>
-            </li>
-            <li
-              :class="{ 'is-selected': $store.ui.currentPath === '/projects/' }"
-              class=""
-            >
-              <div class="_dot">●</div>
-              <a class="_text" href="/projects/">Projects</a>
-            </li>
-            <li
-              :class="{ 'is-selected': $store.ui.currentPath === '/info/' }"
-              class=""
-            >
-              <div class="_dot">●</div>
-              <a class="_text" href="/info/">Info</a>
-            </li>
-            <li
-              :class="{ 'is-selected': $store.ui.currentPath === '/contact/' }"
-              class=""
-            >
-              <div class="_dot">●</div>
-              <a class="_text" href="/contact/">Contact</a>
-            </li>
-          </ol>
-        </nav>
-      </header>
-      <main class="content" id="Content">
-        <div
-          class="content_inner"
-          style="transform: translate3d(0px, 0px, 0px)"
-        >
-          <section
-            class="page"
-            data-page="home"
-            style="display: block; opacity: 1"
-          >
-            <div class="page_content home">
-              <p class="home_aboutme">
-                <span>Né en 1998</span><span>à Dakar, Sénégal.</span
-                ><span>Je crois en</span><span>la conception de sites Web</span
-                ><span>peut être plus</span><span>diversifié et inspirant.</span
-                ><span>Avec pour mission</span><span>de présenter</span
-                ><span>les possibilités</span><span>de la conception Web,</span
-                ><span>Je recherche</span><span>de nouvelles expressions</span
-                ><span>à travers des expériences</span
-                ><span>et des réflexions.</span>
-              </p>
-            </div>
-          </section>
-          <section
-            class="page"
-            data-page="projects"
-            style="display: none; opacity: 0"
-          >
-            <div class="page_content project">
-              <div class="project_section">
-                <h2 class="project_heading">■ Projects ( Develop)</h2>
-                <div class="project_list">
-                  <a
-                    class="project_item text-btn"
-                    href="https://booki-ibou.netlify.app/"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">BOOKI.h</div>
-                    <div class="project_info">2021 / Formation</div></a
-                  ><a
-                    class="project_item text-btn"
-                    href="https://ibra-d.github.io/Optimisation-agence-web-SEO/"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">SEO- PROJECTS</div>
-                    <div class="project_info">2021 / Formation</div></a
-                  ><a
-                    class="project_item text-btn"
-                    href="https://ibra-d.github.io/Creation-d-annimations-HTML-Sass/"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">Oh My Food</div>
-                    <div class="project_info">2021 / Formation</div></a
-                  ><a
-                    class="project_item text-btn"
-                    href="https://github.com/Ibra-d/e-commerce--javaScript-"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">E-Commerce / GitHub</div>
-                    <div class="project_info">2022 / Formation</div></a
-                  >
-                  <a
-                    class="project_item text-btn"
-                    href="https://github.com/Ibra-d/Creation-d-api-Rest-Node-JS"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">Node-JS Projects / GitHub</div>
-                    <div class="project_info">2022 / Formation</div></a
-                  ><a
-                    class="project_item text-btn"
-                    href="https://github.com/Ibra-d/Creation-de-reseau-social-Vue-JS"
-                    target="_blank"
-                    rel="noopener"
-                    ><div class="project_title">Social Media / GitHub</div>
-                    <div class="project_info">2022 / Formation</div></a
-                  >
-                </div>
+    <div class="cursor"></div>
+    <div class="loader">IBOU</div>
+    <main>
+      <section class="landing_page">
+        <header>
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/favicon.ico" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <div class="toggle_down">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
               </div>
-            </div>
-          </section>
-          <section
-            class="page"
-            data-page="info"
-            style="display: none; opacity: 0"
-          >
-            <div class="page_content info">
-              <div class="info_item info_item-1">
-                <div class="info_content">
-                  <ul>
-                    <li>
-                      <a
-                        class="text-btn"
-                        href="https://twitter.com/drame_98"
-                        target="_blank"
-                        rel="noopener"
-                        >Twitter ↗</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        class="text-btn"
-                        href="https://www.instagram.com/"
-                        target="_blank"
-                        rel="noopener"
-                        >Instagram ↗</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="info_item info_item-3">
-                <div class="info_content">
-                  <ul>
-                    <li>
-                      <span class="is-light">Autodidacte<br /></span
-                      ><span>React Native</span>
-                    </li>
-                    <li>
-                      <span class="is-light">Diplomé Titre niveau 5<br /></span
-                      ><span>2022 Nominee</span>
-                    </li>
-                    <li>
-                      <span class="is-light">Amoureux d'informatique<br /></span
-                      ><span>2000 zero, zero, zero (a l'infini)</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section
-            class="page"
-            data-page="contact"
-            style="display: none; opacity: 0"
-          >
-            <div class="page_content contact">
-              <div class="contact_wrap">
-                <p class="contact_forPeopleOverseas">
-                  "Toute technologie <br />
-                  suffisamment avancée <br />
-                  est indiscernable <br />
-                  de la magie." <br />
-                  Arthur C. Clarke <br />
-                  <a
-                    style="color: hsl(0, 0%, 48%)"
-                    href="mailto:drame.ibou.07@gmail.com"
-                    >Contactez Moi !</a
-                  >
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </main>
-    </div>
-    <script src="./assets/js/vendor.js"></script>
-    <script src="./assets/js/main.js"></script>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">MY STACKS</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li class="contact"><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div class="toggle_up">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+          </div>
+        </header>
+        <section class="landing_page_container">
+          <h1 class="text_title">
+            <span>F</span>
+            <span>R</span>
+            <span>O</span>
+            <span>N</span>
+            <span>T</span>
+            <span>E</span>
+            <span>N</span>
+            <span>D</span>
+            <span> </span>
+            <span>D</span>
+            <span>E</span>
+            <span>V</span>
+            <span>E</span>
+            <span>L</span>
+            <span>O</span>
+            <span>P</span>
+            <span>E</span>
+            <span>R</span>
+          </h1>
+          <p class="text_subs">& A BIT OF GAMING</p>
+          <div class="img_container">
+            <img src="./assets/image0.png" width="300" />
+            <div class="linear"></div>
+          </div>
+          <div class="medias">
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </div>
+        </section>
+      </section>
+    </main>
   </body>
+  <script src="./assets/js/dom.js"></script>
 </html>
