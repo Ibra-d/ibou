@@ -226,25 +226,6 @@ body {
           padding: 0.3em 1em;
         }
 
-        .img_container {
-          position: absolute;
-          bottom: 3em;
-
-          img {
-            opacity: 20%;
-            transition: 800ms;
-            mix-blend-mode: lighten;
-          }
-
-          .linear {
-            position: absolute;
-            bottom: 0;
-            height: 6em;
-            width: 100%;
-            background: linear-gradient(#ff000000, $bg 60%);
-          }
-        }
-
         .medias {
           position: absolute;
           right: 0;

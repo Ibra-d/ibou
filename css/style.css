@@ -267,27 +267,6 @@ body main .landing_page .landing_page_container .text_subs {
   padding: 0.3em 1em;
 }
 
-body main .landing_page .landing_page_container .img_container {
-  position: absolute;
-  bottom: 3em;
-}
-
-body main .landing_page .landing_page_container .img_container img {
-  opacity: 20%;
-  -webkit-transition: 800ms;
-  transition: 800ms;
-  mix-blend-mode: lighten;
-}
-
-body main .landing_page .landing_page_container .img_container .linear {
-  position: absolute;
-  bottom: 0;
-  height: 6em;
-  width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff000000), color-stop(60%, #c5c5c5));
-  background: linear-gradient(#ff000000, #c5c5c5 60%);
-}
-
 body main .landing_page .landing_page_container .medias {
   position: absolute;
   right: 0;

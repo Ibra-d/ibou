@@ -70,7 +70,7 @@ gsap.from("nav > ul > li, header > .logo, h1 > span", {
   y: "200",
   opacity: 0,
   stagger: 0.08,
-  duration: 2,
+  duration: 4,
   ease: Expo.easeInOut,
 });
 
@@ -86,7 +86,7 @@ gsap.from(".medias > a", {
 gsap.from(".text_subs", 1, {
   scale: 0,
   ease: Elastic.easeOut,
-  delay: 5,
+  delay: 6,
 });
 
 gsap.to(".loader", 1, {
