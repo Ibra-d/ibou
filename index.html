@@ -40,6 +40,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script>
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
       integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
       crossorigin="anonymous"
@@ -50,69 +54,94 @@
     <div class="cursor"></div>
     <div class="loader">IBOU</div>
     <main>
-      <section class="landing_page">
-        <header>
-          <div class="logo">
-            <a href="./index.html">
-              <img src="./assets/favicon.ico" />
-            </a>
-          </div>
-          <nav>
-            <ul>
-              <div class="toggle_down">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-              </div>
-              <li><a href="#">PROJECTS</a></li>
-              <li><a href="#">MY STACKS</a></li>
-              <li><a href="#">ABOUT</a></li>
-              <li class="contact"><a href="#">CONTACT</a></li>
-            </ul>
-          </nav>
-          <div class="toggle_up">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-          </div>
-        </header>
-        <section class="landing_page_container">
-          <h1 class="text_title">
-            <span>F</span>
-            <span>R</span>
-            <span>O</span>
-            <span>N</span>
-            <span>T</span>
-            <span>E</span>
-            <span>N</span>
-            <span>D</span>
-            <span> </span>
-            <span>D</span>
-            <span>E</span>
-            <span>V</span>
-            <span>E</span>
-            <span>L</span>
-            <span>O</span>
-            <span>P</span>
-            <span>E</span>
-            <span>R</span>
-          </h1>
-          <p class="text_subs">& A BIT OF GAMING</p>
-          <div class="medias">
-            <a href="#">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </div>
+      <div class="container" data-scroll-container>
+        <section class="landing_page" data-scroll-section>
+          <header>
+            <div class="logo">
+              <a href="./index.html">
+                <img src="./assets/favicon.ico" />
+              </a>
+            </div>
+            <nav>
+              <ul>
+                <div class="toggle_down">
+                  <div class="bar bar1"></div>
+                  <div class="bar bar2"></div>
+                </div>
+                <a class="rolling-text" href="#">PROJECTS</a>
+                <a class="rolling-text" href="#">MY STACKS</a>
+                <a class="rolling-text" href="#">ABOUT</a>
+                <a class="rolling-text" href="#">CONTACT</a>
+              </ul>
+            </nav>
+            <div class="toggle_up">
+              <div class="bar bar1"></div>
+              <div class="bar bar2"></div>
+            </div>
+          </header>
+          <section class="landing_page_container">
+            <div class="keep">
+              Available for freelance work from September 2022.
+            </div>
+            <section class="text_title">FRONT-END DEVELOPER</section>
+            <p class="text_subs">& A BIT OF GAMING</p>
+            <div class="medias">
+              <a data-img="./assets/img/in.jpg" href="#">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a data-img="./assets/img/ig.jpg" href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a data-img="./assets/img/git.jpg" href="#">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a data-img="./assets/img/tt.jpg" href="#">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <img src="" class="image_de_reseau" />
+            </div>
+          </section>
         </section>
-      </section>
+        <section class="page_2" id="page_02" data-scroll-section>ok</section>
+      </div>
     </main>
   </body>
   <script src="./assets/js/dom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      multiplier: 1 / 5,
+      smartphone: {
+        smooth: true,
+      },
+    });
+
+    let elements = document.querySelectorAll(".rolling-text");
+
+    elements.forEach((element) => {
+      let innerText = element.innerText;
+      element.innerHTML = "";
+
+      let textContainer = document.createElement("div");
+      textContainer.classList.add("block");
+
+      for (let letter of innerText) {
+        let span = document.createElement("span");
+        span.innerText = letter.trim() === "" ? "\xa0" : letter;
+        span.classList.add("letter");
+        textContainer.appendChild(span);
+      }
+
+      element.appendChild(textContainer);
+      element.appendChild(textContainer.cloneNode(true));
+    });
+
+    elements.forEach((element) => {
+      element.addEventListener("mouseover", () => {
+        element.classList.remove("play");
+      });
+    });
+  </script>
 </html>

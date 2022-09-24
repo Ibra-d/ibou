@@ -18,7 +18,7 @@ $(".toggle_up").on("click", function () {
 $(".toggle_down").on("click", function () {
   setTimeout(() => {
     gsap.to("nav > ul", {
-      translate: "100% 0",
+      translate: "150% 0",
       ease: Elastic.easeOut,
     });
   }, 500);
@@ -42,15 +42,13 @@ $(document).on("mousemove", function (e) {
     left: x,
   });
 
-  $(".img_container ").css({
-    translate: `${-x / 60 + "px"} ${-y / 60 + "px"}`,
-  });
+  return { x, y };
 });
 
 $("a").mouseenter(function () {
   $(".cursor").css({
-    height: "50px",
-    width: "50px",
+    height: "60px",
+    width: "60px",
     "background-color": "transparent",
     border: "1px solid #000",
   });
@@ -65,21 +63,20 @@ $("a").mouseleave(function () {
   });
 });
 
-gsap.from("nav > ul > li, header > .logo, h1 > span", {
+gsap.from("nav > ul > a, header > .logo, section ", {
   delay: 3,
   y: "200",
   opacity: 0,
-  stagger: 0.08,
+  stagger: 0.09,
   duration: 4,
   ease: Expo.easeInOut,
 });
 
-gsap.from(".medias > a", {
-  delay: 3,
+gsap.from(".medias > a", 4, {
+  delay: 5,
   x: "200",
   opacity: 0,
-  stagger: 0.08,
-  duration: 2,
+  stagger: 0.09,
   ease: Expo.easeInOut,
 });
 
@@ -89,14 +86,27 @@ gsap.from(".text_subs", 1, {
   delay: 6,
 });
 
-gsap.to(".loader", 1, {
+gsap.to(".loader", 2, {
   top: 0,
   ease: Elastic.easeOut,
 });
 
-gsap.to(".loader", 1, {
-  ease: Elastic.easeOut,
+gsap.to(".loader", 2, {
+  ease: Expo.easeInOut,
   delay: 3,
-  duration: 2,
   left: "100%",
+});
+
+const dataImg = document.querySelectorAll(".medias > a");
+dataImg.forEach((el) => {
+  const attr = el.dataset.img;
+
+  el.addEventListener("mouseenter", function (e) {
+    const img = document.querySelector(".image_de_reseau");
+    img.src = attr;
+
+    gsap.from(img, 2, {
+      opacity: 0,
+    });
+  });
 });

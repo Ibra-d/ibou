@@ -1,20 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Michroma:regular);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One:regular);
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: none;
+  scroll-behavior: smooth;
+  font-weight: bold;
 }
 
 body {
   background-color: #c5c5c5;
-  font-family: "Orbitron";
+  font-family: "Poiret One";
   margin: 0;
   padding: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  overflow: hidden;
 }
 
 body .loader {
@@ -24,6 +27,16 @@ body .loader {
   height: 100vh;
   width: 100%;
   background-color: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   z-index: 20;
 }
 
@@ -34,8 +47,8 @@ body .cursor {
   border-radius: 50%;
   translate: -50% -50%;
   background-color: #000;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
   z-index: 10;
   pointer-events: none;
   display: -webkit-box;
@@ -119,24 +132,141 @@ body main .landing_page header nav ul .toggle_down {
   display: none;
 }
 
-body main .landing_page header nav ul li {
-  list-style: none;
-  padding: 0.4em;
-}
-
-body main .landing_page header nav ul li:hover {
-  -webkit-transform: translateY(1em);
-          transform: translateY(1em);
-}
-
-body main .landing_page header nav ul li a {
+body main .landing_page header nav ul .rolling-text {
+  display: inline-block;
+  line-height: 100px;
+  letter-spacing: 0px;
+  height: 100px;
   text-decoration: none;
+  overflow: hidden;
   color: #000;
-  width: 100%;
-  height: 100%;
+  font-weight: bold;
 }
 
-body main .landing_page header nav ul .contact {
+body main .landing_page header nav ul .rolling-text:hover .letter,
+body main .landing_page header nav ul .rolling-text.play .letter {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+body main .landing_page header nav ul .rolling-text .block:last-child {
+  color: #777777;
+}
+
+body main .landing_page header nav ul .rolling-text .letter {
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1), -webkit-transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+body main .landing_page header nav ul .letter:nth-child(1) {
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(2) {
+  -webkit-transition-delay: 0.015s;
+          transition-delay: 0.015s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(3) {
+  -webkit-transition-delay: 0.03s;
+          transition-delay: 0.03s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(4) {
+  -webkit-transition-delay: 0.045s;
+          transition-delay: 0.045s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(5) {
+  -webkit-transition-delay: 0.06s;
+          transition-delay: 0.06s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(6) {
+  -webkit-transition-delay: 0.075s;
+          transition-delay: 0.075s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(7) {
+  -webkit-transition-delay: 0.09s;
+          transition-delay: 0.09s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(8) {
+  -webkit-transition-delay: 0.105s;
+          transition-delay: 0.105s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(9) {
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(10) {
+  -webkit-transition-delay: 0.135s;
+          transition-delay: 0.135s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(11) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(12) {
+  -webkit-transition-delay: 0.165s;
+          transition-delay: 0.165s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(13) {
+  -webkit-transition-delay: 0.18s;
+          transition-delay: 0.18s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(14) {
+  -webkit-transition-delay: 0.195s;
+          transition-delay: 0.195s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(15) {
+  -webkit-transition-delay: 0.21s;
+          transition-delay: 0.21s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(16) {
+  -webkit-transition-delay: 0.225s;
+          transition-delay: 0.225s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(17) {
+  -webkit-transition-delay: 0.24s;
+          transition-delay: 0.24s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(18) {
+  -webkit-transition-delay: 0.255s;
+          transition-delay: 0.255s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(19) {
+  -webkit-transition-delay: 0.27s;
+          transition-delay: 0.27s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(20) {
+  -webkit-transition-delay: 0.285s;
+          transition-delay: 0.285s;
+}
+
+body main .landing_page header nav ul .letter:nth-child(21) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+body main .landing_page header nav .contact {
   border: 1px solid #000;
 }
 
@@ -170,6 +300,10 @@ body main .landing_page header nav ul .contact {
     -webkit-transition: 200ms cubic-bezier(1, 0, 0, 1);
     transition: 200ms cubic-bezier(1, 0, 0, 1);
   }
+  body main .landing_page header nav {
+    z-index: 40;
+    background-color: #c5c5c5;
+  }
   body main .landing_page header nav ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -181,7 +315,7 @@ body main .landing_page header nav ul .contact {
     height: 100vh;
     width: 100%;
     background-color: #c5c5c5;
-    translate: 100% 0;
+    translate: 150% 0;
     -webkit-transition: 900ms cubic-bezier(1, 0, 0, 1);
     transition: 900ms cubic-bezier(1, 0, 0, 1);
   }
@@ -246,13 +380,33 @@ body main .landing_page .landing_page_container {
   position: relative;
 }
 
+body main .landing_page .landing_page_container .keep {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+  position: absolute;
+  left: -167px;
+  bottom: 14em;
+  font-size: 1em;
+  rotate: 270deg;
+}
+
 body main .landing_page .landing_page_container .text_title {
-  font-size: 4em;
+  font-size: 5vw;
   font-weight: bold;
   margin: 0;
   padding: 0;
-  color: #c5c5c5;
-  text-shadow: black 2px 0px 0px, black 1.75517px 0.95885px 0px, black 1.0806px 1.68294px 0px, black 0.14147px 1.99499px 0px, black -0.83229px 1.81859px 0px, black -1.60229px 1.19694px 0px, black -1.97998px 0.28224px 0px, black -1.87291px -0.70157px 0px, black -1.30729px -1.5136px 0px, black -0.42159px -1.95506px 0px, black 0.56732px -1.91785px 0px, black 1.41734px -1.41108px 0px, black 1.92034px -0.55883px 0px;
+  color: #000;
 }
 
 body main .landing_page .landing_page_container .text_title span {
@@ -287,12 +441,30 @@ body main .landing_page .landing_page_container .medias {
 }
 
 body main .landing_page .landing_page_container .medias a {
-  padding: 0.5em;
+  padding: 0.5em 0 0.5em 0.5em;
   color: #000;
   text-decoration: none;
+  position: relative;
 }
 
 body main .landing_page .landing_page_container .medias a i {
   font-size: 1.3em;
+}
+
+body main .landing_page .landing_page_container .medias .image_de_reseau {
+  width: 200px;
+  position: absolute;
+  rotate: -5deg;
+  left: -236px;
+  opacity: 70%;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+body main .page_2 {
+  height: 100vh;
+  width: 100%;
+  border-radius: 2em;
+  border: 2px solid #000;
 }
 /*# sourceMappingURL=style.css.map */
