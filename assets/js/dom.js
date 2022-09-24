@@ -97,25 +97,17 @@ gsap.to(".loader", 2, {
   left: "100%",
 });
 
-const dataImg = document.querySelectorAll(".medias > a");
-dataImg.forEach((el) => {
-  const attr = el.dataset.img;
+// const dataImg = document.querySelectorAll(".medias > a");
+// dataImg.forEach((el) => {
+//   const attr = el.dataset.img;
 
-  el.addEventListener("mouseenter", function (e) {
-    const img = document.querySelector(".image_de_reseau");
-    img.src = attr;
+//   el.addEventListener("mouseenter", function (e) {
+//     const img = document.querySelector(".image_de_reseau");
+//     img.src = attr;
+//   });
 
-    gsap.from(img,  {
-      opacity: 0,
-    });
-    gsap.to(img, {
-      opacity: 1,
-      delay: 2,
-    });
-  });
-
-  el.addEventListener("mouseleave", function (e) {
-    const img = document.querySelector(".image_de_reseau");
-    img.src = "";
-  });
-});
+//   el.addEventListener("mouseleave", function (e) {
+//     const img = document.querySelector(".image_de_reseau");
+//     img.src = "";
+//   });
+// });
