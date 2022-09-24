@@ -105,8 +105,17 @@ dataImg.forEach((el) => {
     const img = document.querySelector(".image_de_reseau");
     img.src = attr;
 
-    gsap.from(img, 2, {
+    gsap.from(img,  {
       opacity: 0,
     });
+    gsap.to(img, {
+      opacity: 1,
+      delay: 2,
+    });
+  });
+
+  el.addEventListener("mouseleave", function (e) {
+    const img = document.querySelector(".image_de_reseau");
+    img.src = "";
   });
 });
