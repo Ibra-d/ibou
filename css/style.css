@@ -30,6 +30,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .bgVideo {
@@ -102,8 +103,6 @@ body {
   }
   .container .header .navigation a {
     padding: 0.5em 1em;
-    -webkit-transition: 400ms;
-    transition: 400ms;
   }
   .container .header .navigation a:hover {
     padding: 0.5em 1.3em;

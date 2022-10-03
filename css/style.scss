@@ -31,6 +31,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 .bgVideo {
@@ -88,7 +89,6 @@ body {
 
         a {
           padding: 0.5em 1em;
-          transition: 400ms;
 
           &:hover {
             padding: 0.5em 1.3em;
