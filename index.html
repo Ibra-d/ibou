@@ -3,19 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>ID - FRONT.DEV®</title>
+    <title>Ibrahima Drame ®</title>
     <meta name="description" content="Developpeur" />
-    <!-- <link rel="canonical" href="https://p5aholic.me" /> -->
+    <!-- <link rel="canonical" href="https://exemple.me" /> -->
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Drame Ibrahima" />
     <meta property="og:title" content="Drame Ibrahima" />
     <meta property="og:description" content="Developer in french" />
-    <!-- <meta property="og:url" content="https://p5aholic.me" /> -->
-    <!-- <meta
-      property="og:image"
-      content="https://p5aholic.me/assets/share-image.png"
-    /> -->
+    <!-- <meta property="og:url" content="https://exemple.me" /> -->
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -23,25 +19,33 @@
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon-32x32.png"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon.ico"
+      href="./assets/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./assets/favicon.ico"
+      href="./assets/favicon-32x32.png"
     />
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script>
+    <!-- Locomotive Scroll -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -51,97 +55,43 @@
     />
   </head>
   <body>
-    <div class="cursor"></div>
-    <div class="loader">IBOU</div>
-    <main>
-      <div class="container" data-scroll-container>
-        <section class="landing_page" data-scroll-section>
-          <header>
-            <div class="logo">
-              <a href="./index.html">
-                <img src="./assets/favicon.ico" />
-              </a>
-            </div>
-            <nav>
-              <ul>
-                <div class="toggle_down">
-                  <div class="bar bar1"></div>
-                  <div class="bar bar2"></div>
-                </div>
-                <a class="rolling-text" href="#">PROJECTS</a>
-                <a class="rolling-text" href="#">MY STACKS</a>
-                <a class="rolling-text" href="#">ABOUT</a>
-                <a class="rolling-text" href="#">CONTACT</a>
-              </ul>
-            </nav>
-            <div class="toggle_up">
-              <div class="bar bar1"></div>
-              <div class="bar bar2"></div>
-            </div>
-          </header>
-          <section class="landing_page_container">
-            <div class="keep">
-              Available for freelance work from September 2022.
-            </div>
-            <section class="text_title">FRONT-END DEVELOPER</section>
-            <p class="text_subs">& A BIT OF GAMING</p>
-            <div class="medias">
-              <a data-img="./assets/img/in.jpg" href="#">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a data-img="./assets/img/ig.jpg" href="#">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-              <a data-img="./assets/img/git.jpg" href="#">
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a data-img="./assets/img/tt.jpg" href="#">
-                <i class="fa-brands fa-twitter"></i>
-              </a>
-              <!-- <img src="" class="image_de_reseau" /> -->
-            </div>
-          </section>
-        </section>
-        <section class="page_2" id="page_02" data-scroll-section>ok</section>
-      </div>
+    <video class="bgVideo" src="./assets/bg.mp4" autoplay muted loop></video>
+    <!-- <div class="loader">iBOU</div> -->
+    <!-- <div class="cursor"></div> -->
+    <main class="container">
+      <header class="header">
+        <a href="./index.html" class="logo">Ibou</a>
+        <nav class="navigation">
+          <a href="#">About</a>
+          <a href="#">Others</a>
+        </nav>
+        <div class="responsive_nav_toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+      <section class="landing_page">
+        <div class="presentation">
+          <h1>FRONT-END DEVELOPER</h1>
+          <p class="what_i_do">I am DRAME Ibrahima Welcome to me</p>
+          <div class="liens">
+            <a href="#">Work'S</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="reseaux">
+          <a href="#">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </section>
     </main>
   </body>
   <script src="./assets/js/dom.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-  <script>
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-      multiplier: 1 / 5,
-      smartphone: {
-        smooth: true,
-      },
-    });
-
-    let elements = document.querySelectorAll(".rolling-text");
-
-    elements.forEach((element) => {
-      let innerText = element.innerText;
-      element.innerHTML = "";
-
-      let textContainer = document.createElement("div");
-      textContainer.classList.add("block");
-
-      for (let letter of innerText) {
-        let span = document.createElement("span");
-        span.innerText = letter.trim() === "" ? "\xa0" : letter;
-        span.classList.add("letter");
-        textContainer.appendChild(span);
-      }
-
-      element.appendChild(textContainer);
-      element.appendChild(textContainer.cloneNode(true));
-    });
-
-    elements.forEach((element) => {
-      element.addEventListener("mouseover", () => {
-        element.classList.remove("play");
-      });
-    });
-  </script>
 </html>
