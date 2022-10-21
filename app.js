@@ -1,3 +1,18 @@
+/*
+JQuery
+*/
+
+// $(document).ready(function () {
+//   $("body").ripples({
+//     resolution: 200,
+//     perturbance: 2,
+//   });
+// });
+
+/*
+GSAP
+*/
+
 gsap.from(".header__logo, li > a, .blocks__container", {
   duration: 2,
   delay: 2,
@@ -19,68 +34,71 @@ blocks.forEach((block /* index */) => {
 Mouse Enter effect
 */
 
-  block.addEventListener("mouseenter", function (e) {
-    const cible = block.childNodes[5];
+  /* block.addEventListener */
+  $(block).hover(
+    /* "mouseenter", */ function (e) {
+      const cible = block.childNodes[1];
+      console.log(block.childNodes);
 
-    gsap.to(cible, {
-      delay: 0.5,
-      top: "-20px",
-      duration: 2,
-      opacity: 1,
-      ease: Elastic.easeOut,
-    });
+      gsap.to(cible, {
+        top: "-20px",
+        duration: 2,
+        opacity: 1,
+        ease: Elastic.easeOut,
+      });
 
-    gsap.from(".arrow", {
-      delay: 1,
-      duration: 2,
-      rotation: 360,
-      ease: Elastic.easeOut,
-    });
+      gsap.from(".arrow", {
+        delay: 0.1,
+        duration: 1,
+        rotation: 360,
+        ease: Elastic.easeOut,
+      });
+    },
+    function () {
+      const cible = block.childNodes[1];
 
-    gsap.to("h1", {
-      transform: "translate(0)",
-      opacity: 1,
-      duration: 2,
-      delay: 0.7,
-      ease: Elastic.easeOut,
-    });
-  });
+      gsap.to(cible, {
+        top: "30px",
+        duration: 2,
+        opacity: 0,
+        ease: Elastic.easeOut,
+      });
+
+      gsap.to(".arrow", {
+        duration: 1,
+        rotation: 45,
+        ease: Elastic.easeOut,
+      });
+    }
+  );
 
   /*
   Mouse Leave effect
   */
 
-  block.addEventListener("mouseleave", function () {
-    const cible = block.childNodes[5];
+  //   block.addEventListener("mouseleave", function () {
+  //     const cible = block.childNodes[3];
 
-    gsap.to(cible, {
-      delay: 0,
-      top: "150px",
-      duration: 1.1,
-      opacity: 0,
-      ease: Elastic.easeOut,
-    });
+  //     gsap.to(cible, {
+  //       delay: 0,
+  //       top: "150px",
+  //       duration: 1.1,
+  //       opacity: 0,
+  //       ease: Elastic.easeOut,
+  //     });
 
-    gsap.fromTo(
-      ".arrow",
-      {
-        duration: 1,
-        rotation: 360,
-        ease: Elastic.easeOut,
-      },
-      {
-        rotation: 45,
-      }
-    );
-
-    gsap.to("h1", {
-      transform: "translateY(150px)",
-      opacity: 0,
-      delay: 0.1,
-      duration: 2,
-      ease: Elastic.easeInOut,
-    });
-  });
+  //     gsap.fromTo(
+  //       ".arrow",
+  //       {
+  //         duration: 1,
+  //         rotation: 360,
+  //         ease: Elastic.easeOut,
+  //       },
+  //       {
+  //         rotation: 45,
+  //       }
+  //     );
+  //   });
 });
 
 /* 
@@ -102,3 +120,9 @@ Three Js
 /*
 Vanilla Js
 */
+
+const skewEl = document.querySelector(".blocks__container");
+
+skewEl.scroll = () => {
+  alert("ok");
+};

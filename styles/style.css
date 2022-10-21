@@ -92,10 +92,14 @@ body .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 0.1em;
+  min-height: 465px !important;
+  max-height: 465px !important;
+  border: 2px solid red;
 }
 .blocks__container .block {
   height: 450px !important;
-  width: 70vw !important;
+  width: 220px;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -103,48 +107,10 @@ body .container {
   position: relative !important;
   border: 1px solid rgba(255, 255, 255, 0.062745098);
   cursor: pointer;
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  transform: translateZ(20px);
-}
-.blocks__container .block .img-container {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-.blocks__container .block .data__container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  gap: 2em;
-  padding: 0 1em 0 0;
-}
-.blocks__container .block .data__container h1 {
-  font-size: 5em;
-  margin: 0;
-  transform: translateY(150px);
-  opacity: 0;
-}
-.blocks__container .block .data__container .project__description {
-  overflow: hidden;
-  width: 500px;
-  text-align: right;
-  font-size: 1.6em;
-  margin: 0;
-  align-self: flex-end;
 }
 .blocks__container .block .arrow-container {
-  overflow: visible;
   position: absolute;
-  top: 150px;
+  top: 30px;
   right: -20px;
   height: 3em;
   width: 3em;
@@ -158,6 +124,33 @@ body .container {
 .blocks__container .block .arrow-container .arrow {
   transform: rotate(45deg);
   opacity: 1;
+}
+.blocks__container .block .deco {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+.blocks__container .block:nth-child(1) {
+  background: url("../assets/img-1.jpg");
+}
+.blocks__container .block:nth-child(2) {
+  background: url("../assets/img-2.jpg");
+}
+.blocks__container .block:nth-child(3) {
+  background: url("../assets/img-3.jpg");
+}
+.blocks__container .block:nth-child(4) {
+  background: url("../assets/img-4.jpg");
+}
+.blocks__container .block:nth-child(5) {
+  background: url("../assets/img-5.jpg");
+}
+.blocks__container .block:nth-child(6) {
+  background: url("../assets/img-6.jpg");
+}
+.blocks__container .block:nth-child(7) {
+  background: url("../assets/img-2.jpg");
 }
 
 .footer {
