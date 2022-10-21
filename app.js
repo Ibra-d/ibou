@@ -2,25 +2,35 @@
 JQuery
 */
 
-// $(document).ready(function () {
-//   $("body").ripples({
-//     resolution: 200,
-//     perturbance: 2,
-//   });
-// });
+$(document).mousemove(function (e) {
+  // $("body").ripples({
+  //   resolution: 200,
+  //   perturbance: 2,
+  // });
+
+  console.log(e.clientX);
+
+  $(".cursor, .cursor_suiver").css({
+    top: e.clientY + "px",
+    left: e.clientX + "px",
+  });
+});
 
 /*
 GSAP
 */
 
-gsap.from(".header__logo, li > a, .blocks__container", {
-  duration: 2,
-  delay: 2,
-  opacity: 0,
-  y: "200",
-  stagger: 0.1,
-  ease: Expo.easeInOut,
-});
+gsap.from(
+  ".header__logo, li > a, .blocks__container, .block, .mailto > a, .medias > a",
+  {
+    duration: 5,
+    delay: 1,
+    opacity: 0,
+    y: "50",
+    stagger: 0.1,
+    ease: Elastic.easeOut,
+  }
+);
 
 /* 
  Recupere tous les blocks 
@@ -75,30 +85,6 @@ Mouse Enter effect
   /*
   Mouse Leave effect
   */
-
-  //   block.addEventListener("mouseleave", function () {
-  //     const cible = block.childNodes[3];
-
-  //     gsap.to(cible, {
-  //       delay: 0,
-  //       top: "150px",
-  //       duration: 1.1,
-  //       opacity: 0,
-  //       ease: Elastic.easeOut,
-  //     });
-
-  //     gsap.fromTo(
-  //       ".arrow",
-  //       {
-  //         duration: 1,
-  //         rotation: 360,
-  //         ease: Elastic.easeOut,
-  //       },
-  //       {
-  //         rotation: 45,
-  //       }
-  //     );
-  //   });
 });
 
 /* 
