@@ -95,6 +95,7 @@ const scroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   direction: "horizontal",
+  multiplier: 1 / 10,
 });
 
 /*
@@ -106,4 +107,3 @@ Three Js
 /*
 Vanilla Js
 */
-
