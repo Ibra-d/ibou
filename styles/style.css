@@ -40,16 +40,7 @@ body .cursor {
   border-radius: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-  transition: 300ms;
-}
-body .cursor_suiver {
-  height: 30px;
-  width: 30px;
-  border: 1px solid #f8ffc8;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  transition: 500ms;
+  transition: all 100ms;
 }
 body .container {
   margin: 0 3em;
