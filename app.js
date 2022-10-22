@@ -10,7 +10,7 @@ $(document).mousemove(function (e) {
 
   console.log(e.clientX);
 
-  $(".cursor, .cursor_suiver").css({
+  $(".cursor, .cursor_s").css({
     top: e.clientY + "px",
     left: e.clientX + "px",
   });
@@ -47,7 +47,7 @@ Mouse Enter effect
   /* block.addEventListener */
   $(block).hover(
     /* "mouseenter", */ function (e) {
-      const cible = block.childNodes[1];
+      const cible = block.childNodes[3];
       console.log(block.childNodes);
 
       gsap.to(cible, {
@@ -65,7 +65,7 @@ Mouse Enter effect
       });
     },
     function () {
-      const cible = block.childNodes[1];
+      const cible = block.childNodes[3];
 
       gsap.to(cible, {
         top: "30px",
@@ -107,8 +107,3 @@ Three Js
 Vanilla Js
 */
 
-const skewEl = document.querySelector(".blocks__container");
-
-skewEl.scroll = () => {
-  alert("ok");
-};
