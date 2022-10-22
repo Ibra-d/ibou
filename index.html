@@ -22,14 +22,17 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon.png" />
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+    <script src="./jquery.js"></script>
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script> -->
+    <script src="./gsap.js"></script>
     <!-- Locomotive Scroll -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
-    />
+    /> -->
+    <link rel="stylesheet" href="./locomotive.css" />
   </head>
   <body>
     <div class="cursor"></div>
@@ -99,12 +102,7 @@
             <img src="./assets/arrow.png" class="arrow" width="30" />
           </a>
         </section>
-        <section
-          class="block"
-          data-scroll
-          data-scroll-speed="0.4"
-          data-scroll-section
-        >
+        <section class="block" data-scroll-section>
           <img src="./assets/img-4.jpg" class="project-img" />
           <a href="https://cg12.netlify.app/" class="arrow-container">
             <img src="./assets/arrow.png" class="arrow" width="30" />
@@ -146,7 +144,9 @@
       </div>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.145.0/build/three.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script> -->
+  <script src="./locomotive.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.145.0/build/three.min.js"></script> -->
+  <script src="./three.js"></script>
   <script src="./app.js" type="module"></script>
 </html>
