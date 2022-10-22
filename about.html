@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Ibrahima Drame - Frontend Developer ®</title>
-    <meta name="description" content="Developpeur" />
+    <meta name="description" content="Developer" />
     <!-- <link rel="canonical" href="https://exemple.me" /> -->
     <meta property="og:locale" content="en_EN" />
     <meta property="og:type" content="website" />
@@ -17,27 +17,27 @@
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google" content="nositelinkssearchbox" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/icon.png" />
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./jquery.js"></script>
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.js"></script>
+    <script src="./gsap.js"></script>
     <!-- Locomotive Scroll -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
-    />
+    <link rel="stylesheet" href="./locomotive.css" />
+    <!-- Tweenmax -->
+    <script src="./tmax.js"></script>
   </head>
   <body>
-    <!-- <div class="cursor"></div>
-    <div class="cursor_suiver"></div> -->
+    <div class="cursor"></div>
+    <div class="cursor_s"></div>
+
     <!-- 
         iiiii   iiiiiiiiiiiiiii
         iiiii   iiiiiiiiiiiiiiiii
-        iiiii   iiiii         iiiii  
+        iiiii   iiiii         iiiii
         iiiii   iiiii         iiiii
         iiiii   iiiiiiiiiiiiiiiiii
         iiiii   iiiiiiiiiiiiiiiiii
@@ -61,11 +61,101 @@
     </div>
 
     <div class="container">
-        
+      <header class="header">
+        <div class="header__logo">
+          <a href="./index.html">IBRAHIMA</a>
+        </div>
+        <!-- Nav -->
+        <nav class="header__nav">
+          <ul>
+            <li>
+              <a href="mailto:drame.ibou.07@gmail.com">CONTACT</a>
+            </li>
+            <li>
+              <a href="./assets/didwf98.pdf"> CV </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
+      <!-- 
+        Container
+       -->
+      <div class="my_bio">
+        <div>
+          Hello, I'm Ibrahim, I'm 23 years old. <br />
+          I didn't do long studies at school, <br />
+          but I still had this passion for the computer in me
+          <br />
+          and in my head my pro project was generally "IT", I had no idea of
+          ​​its immensity,
+          <br />
+          in 2020 I participated in a basic skills training for 3 weeks, <br />
+          from where I discovered 2D video game development in python and web
+          development with a CMS, HTML/CSS. <br />
+          as you can imagine I opted for web development. <br />
+
+          the idea of ​​starting from a PSD has something dynamic with fluid
+          animations, "I loved it", <br />
+
+          after this 3-week training I trained on CodeAcademy, from where I took
+          my first big step in HTML / CSS, <br />
+
+          then I decided to go further by doing a diploma course, <br />
+
+          I registered on OppenclassRooms for a 6 month training during which I
+          learned : <br />
+          <a href="#" class="vue">VueJS</a> <br />
+          <a href="#" class="js">JavaScript</a> <br />
+          <a href="#" class="node">NodeJs</a> <br />
+          I not only learned I also practiced ;) <br />
+          I created a social network with js view allowing to create an account
+          to publish, delete, modify, <br />
+          in short the CRUD what, I created a rest api with nodeJs, an
+          e-commerce site in javascript, <br />
+
+          and since then I've been making projects inspired by
+          <span class="inspi">dribble</span> and
+          <span class="inspi">awwwards</span>, <br />
+
+          Today I am open to all proposals
+        </div>
+      </div>
+
+      <!-- 
+        SVG
+       -->
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="200px"
+        height="200px"
+        viewBox="0 0 300 300"
+        enable-background="new 0 0 300 300"
+        xml:space="preserve"
+      >
+        <defs>
+          <path
+            id="circlePath"
+            d=" M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+          />
+        </defs>
+        <circle cx="150" cy="100" r="75" fill="none" />
+        <g>
+          <use xlink:href="#circlePath" fill="none" />
+          <text fill="#000">
+            <textPath xlink:href="#circlePath">
+              open to all suggestions 👨🏾‍💻
+            </textPath>
+          </text>
+        </g>
+      </svg>
     </div>
   </body>
-  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.145.0/build/three.min.js"></script>
-  <script src="./app.js" type="module"></script>
+  <script src="./locomotive.js"></script>
+  <script src="./three.js"></script>
+  <script src="./app-about.js"></script>
 </html>

@@ -2,19 +2,19 @@
 JQuery
 */
 
-$(document).mousemove(function (e) {
-  // $("body").ripples({
-  //   resolution: 200,
-  //   perturbance: 2,
-  // });
+// $(document).mousemove(function (e) {
+//   // $("body").ripples({
+//   //   resolution: 200,
+//   //   perturbance: 2,
+//   // });
 
-  console.log(e.clientX);
+//   console.log(e.clientX);
 
-  $(".cursor, .cursor_s").css({
-    top: e.clientY + "px",
-    left: e.clientX + "px",
-  });
-});
+//   $(".cursor, .cursor_s").css({
+//     top: e.clientY + "px",
+//     left: e.clientX + "px",
+//   });
+// });
 
 /*
 GSAP
@@ -23,7 +23,7 @@ GSAP
 gsap.from(
   ".header__logo, li > a, .blocks__container, .block, .mailto > a, .medias > a",
   {
-    duration: 5,
+    duration: 3,
     delay: 1,
     opacity: 0,
     y: "50",
@@ -107,3 +107,53 @@ Three Js
 /*
 Vanilla Js
 */
+
+/*
+TweenMax
+*/
+
+var cursor = $(".cursor"),
+  follower = $(".cursor_s");
+
+var posX = 0,
+  posY = 0,
+  mouseX = 0,
+  mouseY = 0;
+
+TweenMax.to({}, 0.016, {
+  repeat: -1,
+  onRepeat: function () {
+    posX += (mouseX - posX) / 9;
+    posY += (mouseY - posY) / 9;
+
+    TweenMax.set(follower, {
+      css: {
+        left: posX,
+        top: posY,
+      },
+    });
+
+    TweenMax.set(cursor, {
+      css: {
+        left: mouseX,
+        top: mouseY,
+      },
+    });
+  },
+});
+
+$(document).on("mousemove", function (e) {
+  mouseX = e.pageX;
+  mouseY = e.pageY;
+});
+
+$("a").on("mouseenter", function() {
+  cursor.addClass("active");
+  follower.addClass("active");
+});
+
+$("a").on("mouseleave", function() {
+  cursor.removeClass("active");
+  follower.removeClass("active");
+});
+
