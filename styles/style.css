@@ -34,6 +34,21 @@ body {
   height: 100vh;
   position: relative;
 }
+body .loader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+}
+body .loader p {
+  font-size: 4vw;
+}
 body .cursor {
   height: 5px;
   width: 5px;
@@ -67,12 +82,23 @@ body .cursor_s {
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
+body .cursor_s img {
+  opacity: 0;
+  transform: rotate(45deg);
+}
 body .cursor_s.active {
-  transform: scale(2) translate(-30%, -20%);
+  transform: scale(1.3) translate(-30%, -20%);
   background-color: white;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
+  border: none;
+}
+body .cursor_s.active img {
+  transform: scale(0.5) rotate(45deg);
+  width: 15;
+  opacity: 1;
 }
 body .container {
+  opacity: 0;
   margin: 0 3em;
   position: relative;
   height: 100%;
@@ -98,10 +124,11 @@ body .container {
   }
   .container {
     display: none;
+    height: 100vh !important;
   }
 }
 .header {
-  height: 100px;
+  height: 10vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -150,43 +177,28 @@ body .container {
 }
 
 .blocks__container {
+  max-height: 90vh !important;
+  min-height: 90vh !important;
+  width: 100%;
+}
+.blocks__container .blocks-inner {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.1em;
-  min-height: 70vh !important;
-  max-height: 70vh !important;
+  margin-left: 15em;
 }
-.blocks__container .block {
-  height: 90% !important;
-  width: 220px;
-  margin: 0 1em !important;
+.blocks__container .blocks-inner .skewElem {
+  height: 40% !important;
+  width: 120px !important;
+  margin: 0 0.1em !important;
   position: relative !important;
   border: 1px solid rgba(255, 255, 255, 0.062745098);
 }
-.blocks__container .block .project-img {
-  width: 100%;
-  height: 100%;
+.blocks__container .blocks-inner .skewElem .project-img {
+  width: 100% !important;
+  height: 100% !important;
   pointer-events: none;
-}
-.blocks__container .block .arrow-container {
-  z-index: 10;
-  position: absolute;
-  top: 30px;
-  right: -20px;
-  height: 3em;
-  width: 3em;
-  background-color: white;
-  border: 1px solid black;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-}
-.blocks__container .block .arrow-container .arrow {
-  transform: rotate(45deg);
-  opacity: 1;
 }
 
 .footer {

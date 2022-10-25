@@ -1,112 +1,56 @@
 /*
-JQuery
-*/
-
-// $(document).mousemove(function (e) {
-//   // $("body").ripples({
-//   //   resolution: 200,
-//   //   perturbance: 2,
-//   // });
-
-//   console.log(e.clientX);
-
-//   $(".cursor, .cursor_s").css({
-//     top: e.clientY + "px",
-//     left: e.clientX + "px",
-//   });
-// });
-
-/*
 GSAP
 */
 
-gsap.from(
-  ".header__logo, li > a, .blocks__container, .block, .mailto > a, .medias > a",
-  {
-    duration: 3,
-    delay: 1,
-    opacity: 0,
-    y: "50",
-    stagger: 0.1,
-    ease: Elastic.easeOut,
-  }
-);
-
-/* 
- Recupere tous les blocks 
- puis les animer une par une au survol
-*/
-
-const blocks = document.querySelectorAll(".block");
-
-blocks.forEach((block /* index */) => {
-  /*
-Mouse Enter effect
-*/
-
-  /* block.addEventListener */
-  $(block).hover(
-    /* "mouseenter", */ function (e) {
-      const cible = block.childNodes[3];
-      console.log(block.childNodes);
-
-      gsap.to(cible, {
-        top: "-20px",
-        duration: 2,
-        opacity: 1,
-        ease: Elastic.easeOut,
-      });
-
-      gsap.from(".arrow", {
-        delay: 0.1,
-        duration: 1,
-        rotation: 360,
-        ease: Elastic.easeOut,
-      });
-    },
-    function () {
-      const cible = block.childNodes[3];
-
-      gsap.to(cible, {
-        top: "30px",
-        duration: 2,
-        opacity: 0,
-        ease: Elastic.easeOut,
-      });
-
-      gsap.to(".arrow", {
-        duration: 1,
-        rotation: 45,
-        ease: Elastic.easeOut,
-      });
-    }
-  );
-
-  /*
-  Mouse Leave effect
-  */
+gsap.to(".container", {
+  duration: 2,
+  delay: 8,
+  opacity: 1,
 });
+
+gsap.to(".loader", {
+  delay: 8,
+  duration: 1,
+  ease: Expo.easeIn,
+  left: "100%",
+});
+
+/**
+ * Skew effect
+ * on scroll
+ */
 
 /* 
 Locomotive scroll
 */
 
-const scroll = new LocomotiveScroll({
+const locoScroll = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   direction: "horizontal",
   multiplier: 1 / 10,
 });
 
-/*
-Three Js
-*/
+/**
+ * Loader
+ * Counter
+ */
 
-// const scene = new THREE.Scene();
 
-/*
-Vanilla Js
-*/
+setTimeout(() => {
+  var counter = 0;
+  var c = 0;
+  var i = setInterval(function () {
+    $(".loader > p").html(c + "%");
+
+    counter++;
+    c++;
+
+    if (counter == 101) {
+      clearInterval(i);
+    }
+  }, 60);
+}, 1500);
 
 /*
 TweenMax
@@ -120,7 +64,7 @@ var posX = 0,
   mouseX = 0,
   mouseY = 0;
 
-TweenMax.to({}, 0.016, {
+TweenMax.to({}, 0.01, {
   repeat: -1,
   onRepeat: function () {
     posX += (mouseX - posX) / 9;
@@ -147,13 +91,12 @@ $(document).on("mousemove", function (e) {
   mouseY = e.pageY;
 });
 
-$("a").on("mouseenter", function() {
+$("a").on("mouseenter", function () {
   cursor.addClass("active");
   follower.addClass("active");
 });
 
-$("a").on("mouseleave", function() {
+$("a").on("mouseleave", function () {
   cursor.removeClass("active");
   follower.removeClass("active");
 });
-

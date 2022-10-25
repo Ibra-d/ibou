@@ -25,28 +25,19 @@
     <script src="./jquery.js"></script>
     <!-- GSAP -->
     <script src="./gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <!-- Locomotive Scroll -->
     <link rel="stylesheet" href="./locomotive.css" />
-    <!-- Tweenmax -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
     <script src="./tmax.js"></script>
   </head>
   <body>
+    <div class="loader">
+      <p>00</p>
+    </div>
     <div class="cursor"></div>
-    <div class="cursor_s"></div>
-
-    <!-- 
-        iiiii   iiiiiiiiiiiiiii
-        iiiii   iiiiiiiiiiiiiiiii
-        iiiii   iiiii         iiiii
-        iiiii   iiiii         iiiii
-        iiiii   iiiiiiiiiiiiiiiiii
-        iiiii   iiiiiiiiiiiiiiiiii
-        iiiii   iiiii          iiii
-        iiiii   iiiii          iiii     iiii
-        iiiii   iiiiiiiiiiiiiiiiiii    iiiiii
-        iiiii   iiiiiiiiiiiiiiiiii      iiii
-     -->
+    <div class="cursor_s">
+      <img src="./assets/arrow.png" width="30" />
+    </div>
 
     <!-- 
       Responsive
@@ -81,48 +72,58 @@
 
       <!-- Landing Page -->
       <div class="blocks__container" data-scroll-container>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-1.jpg" class="project-img" />
-          <a href="https://flpa12.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+        <div class="blocks-inner">
+          <a
+            href="https://flpa12.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-1.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-2.jpg" class="project-img" />
-          <a href="https://cch12.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://cch12.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-2.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-3.jpg" class="project-img" />
-          <a href="https://404a1.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://404a1.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-3.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-4.jpg" class="project-img" />
-          <a href="https://cg12.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://cg12.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-4.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-5.jpg" class="project-img" />
-          <a href="https://paa12.netlify.app/enter" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://paa12.netlify.app/enter"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-5.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-6.jpg" class="project-img" />
-          <a href="https://ffx.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://ffx.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-6.jpg" class="project-img" />
           </a>
-        </section>
-        <section class="block" data-scroll-section>
-          <img src="./assets/img-2.jpg" class="project-img" />
-          <a href="https://ppdx.netlify.app/" class="arrow-container">
-            <img src="./assets/arrow.png" class="arrow" width="30" />
+          <a
+            href="https://ppdx.netlify.app/"
+            class="block skewElem"
+            data-scroll-section
+          >
+            <img src="./assets/img-2.jpg" class="project-img" />
           </a>
-        </section>
+        </div>
+
         <div class="spacing"></div>
       </div>
 
