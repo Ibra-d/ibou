@@ -14077,6 +14077,10 @@ input[name="carousel"] {
     border-width: 2px;
 }
 
+figure img {
+  opacity: 70%;
+}
+
 .grecaptcha-badge {
     display: none;
 }
